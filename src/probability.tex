@@ -1,0 +1,141 @@
+\section{Probability}
+
+\formdesc{Assumptions}
+
+\begin{center}
+  \begin{tabular}{c}
+    $0 \leq P(E) \leq 1$ \\
+    $P(S) = 1$ \\
+    $P(S) = \sum_{i=1}^{\infty} P(E_i)$ \\
+  \end{tabular}
+\end{center}
+
+Sample space $S$ contains each event $E_i$, e.g., $E = \{$all outcomes in $S$ starting with a $3\}$
+
+\hformbar
+
+
+
+\formdesc{Unions and Intersections}
+
+\begin{equation}
+	E \cup F
+\end{equation}
+
+is the union of the two sets $E$ and $F$, i.e., the event where either $E$ or $F$ occurs. The intersection of two events, the outcomes in both $E$ and $F$ is
+
+\begin{equation}
+	E \cap F.
+\end{equation}
+
+\begin{center}
+  \begin{tabular}{lc}
+    Commutative  & $E \cup F = F \cup E$ \\
+                 & $E \cap F = F \cap E$ \\
+    Associative  & $(E \cup F) \cup G = E \cup (F \cup G) $ \\
+                 & $(E \cap F) \cap G = E \cap (F \cap G)$ \\
+    Distributive & $(E \cup F) \cap G = (E \cap G) \cap (F \cap G)$  \\
+                 & $(E \cap F) \cup G = (E \cup G)(F \cup G)$
+  \end{tabular}
+\end{center}
+\hformbar
+
+
+
+\formdesc{Independent Events}
+
+
+
+Two events are independent if knowing the outcome of one provides no useful information about the outcome of the other.
+\hformbar
+
+
+\formdesc{Mutually Exclusive Events}
+
+\begin{equation}
+   P(A \cap B) = 0
+\end{equation}
+
+\vspace{.63em}
+are disjoint events, when $A$ and $B$ are mutually exclusive and there is no intersection---it is not possible for both to happen.
+\hformbar
+
+
+
+\formdesc{Union and Addition Rule}
+
+\begin{equation}
+    P(A \cup B) \equiv P(A \vee B) \equiv \{x: x \in A \vee x \in B\}
+\end{equation}
+
+\begin{center}
+  \begin{tabular}{ll}
+    Independent         & $P(A \cup B) = P(A) + P(B) - P(A \cap B)$   \\
+    Mutually exclusive  & $P(A \cup B) = P(A) + P(B)$                 \\
+  \end{tabular}
+\end{center}
+
+\hformbar
+
+
+
+\formdesc{Intersection and Multiplication Rules}
+
+\begin{equation}
+    P(A \cap B) \equiv P(A \wedge B) \equiv \{x: x \in A \wedge x \in B\}
+\end{equation}
+
+\begin{center}
+  \begin{tabular}{ll}
+    Independent         & $P(A \cap B) = P(A) \cdot P(B)$   \\
+    Mutually exclusive  & $P(A \cap B) = 0$                 \\
+    Dependent           & $P(A \cap B) = P(A) \cdot P(B|A)$ \\
+  \end{tabular}
+\end{center}
+
+\hformbar
+
+
+\formdesc{Complement and Subtraction Rule}
+
+
+\begin{eqnarray}
+P(A') \equiv P(A^c) \equiv P(\neg A) &\equiv& \{x: x \notin A\} \equiv 1 - P(A) \\
+P(A') &=& 1 - P(A)
+\end{eqnarray}
+
+Some implications:
+
+\begin{center}
+  \begin{tabular}{c}
+    $P(A \cup A^c) = 1$ \\
+    $P(A) = 1 - P(A^c)$ \\
+    $P(A|B) = 1 - P(A^c | B)$ \\
+  \end{tabular}
+\end{center}
+\hformbar
+
+
+
+
+\formdesc{Conditional Probability Rule}
+
+\begin{equation}
+	P(A|B) = \frac{P(A \cap B)}{P(B)}
+\end{equation} 
+
+is the probability of the outcome of event A given condition B.
+\hformbar
+
+
+
+\formdesc{Bayes Theorem}
+
+\begin{equation}
+  P(A|B) = \frac{P(A) ~P(B|A)}{ P(A) ~ P(B|A) + P(A) ~ P(B|A)}
+\end{equation}
+
+\hformbar
+
+
+

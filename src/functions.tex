@@ -1,0 +1,361 @@
+\section{Algebra}
+
+\formdesc{Arithmetic Operations}
+\vspace{-3.5em}
+\begin{center}
+\[
+\def\arraystretch{2.5}
+ \begin{array}{ll}
+  a \left( \frac{b}{c} \right) = \frac{ab}{c}   & \frac{\frac{a}{b}}{c} = \frac{a}{bc}               \\
+   \frac{a}{\frac{b}{c}} = \frac{ac}{b}         & \frac{a}{b} \pm \frac{c}{d} = \frac{ad \pm bc}{bd} \\
+   \frac{a - b}{c - d} = \frac{b - a}{d - c}    & \frac{ab + ac}{a} = b + c,~ \forall a \neq 0        \\
+   \frac{a + bc}{c} = \frac{a}{c} = \frac{b}{c} & \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc} 
+ \end{array}
+\]
+\end{center}
+\hformbar
+
+
+
+\formdesc{Exponents}
+
+\vspace{-3.5em}
+\begin{center}
+\[
+\def\arraystretch{2.5}
+ \begin{array}{ll}
+   x^a \cdot x^b = x^{a + b}           & \frac{x^a}{x^b} = x^{a - b}     \\
+   (xy)^a = x^a y^a                    & \frac{x}{y}^a = \frac{x^a}{y^a} \\
+   x^0 = 1 \note                       & x^{-n} = \frac{1}{x} \note      \\
+   x^{\frac{1}{a}} = \sqrt[a]{x} \note & (xy)^a = x^a y^a                \\
+   x^{-a} = \frac{1}{x^a}             & \left( \frac{x}{y}   \right)^{-a} = \left( \frac{y}{x} \right)^a = \frac{y^a}{x^a} 
+ \end{array}
+\]
+\end{center}
+
+$\note \forall x \neq 0$
+
+\hformbar
+
+
+
+\formdesc{Radicals}
+
+\vspace{-2.5em}
+\begin{center}
+\[
+\def\arraystretch{2.5}
+ \begin{array}{ll}
+   \sqrt[a]{x} = x^{\frac{1}{a}} & \sqrt[a]{xy} = \sqrt[a]{x} \sqrt[a]{y}
+ \end{array}
+\]
+\end{center}
+
+\hformbar
+
+
+
+\formdesc{Logarithms}
+
+Defined as $y = log_b x \equiv x = b^y$, with domain of $x > 0$
+
+\begin{center}
+\vspace{-2em}
+\[
+\def\arraystretch{1.6}
+ \begin{array}{ll}
+   log_b b = 1 & log_b 1 = 0 \\
+   log_b b^x = x & b^{log_b x} = x \\
+   log_b \left( x^r \right) = r ~ log_b x &  \\
+   log_b \left( \frac{x}{y} \right) = log_b x - log_b y & \\
+   log_b (xy) = log_b x + log_b y & 
+ \end{array}
+\]
+\end{center}
+
+\hformbar
+
+
+
+\formdesc{Factoring}
+
+\begin{center}
+\vspace{-2em}
+\[
+\def\arraystretch{1.6}
+ \begin{array}{c}
+   x^2 - a^2 = (x + a)(x -a ) \\
+   x^2 \pm 2ax + a^2 = (x \pm a)^2 \\
+   x^2 + (a + b)x + ab = (x + a)(x + b)
+ \end{array}
+\]
+\end{center}
+
+\hformbar
+
+
+
+
+
+\formdesc{Functions}
+
+\begin{itemize}
+	\item A rule for a relationship between an input and an output quantity where each input \textit{uniquely determines} an output value 
+	\item Must be of the form $y = f(x)$
+\end{itemize}
+
+\begin{footnotesize}
+  \begin{tabular}{ll}
+    \textsc{type} & \textsc{form} \\
+    \midrule
+    Constant & $f(x) = c$ \\
+    Identity & $f(x) = x$ \\
+    Absolute & $f(x) = |x|$\\
+    Quadratic & $f(x) = x^2$  \\
+    Cubic     & $f(x) = x^3$  \\
+    Reciprocal & $f(x) = \frac{1}{x^2}$  \\
+    Square root & $f(x) = \sqrt{x}$  \\
+  \end{tabular}
+\end{footnotesize}
+\hformbar
+
+
+
+\formdesc{Transformations of Functions}
+
+\vspace{.3em}
+\begin{footnotesize}
+  \begin{tabular}{ll}
+  \centering
+    \textsc{Transformation} & \textsc{Form} \\
+    \midrule
+    Vertical shift & $f'(x) = f(x) + k$ \\
+    Horizontal shift & $f'(x) = f(x - k)$\\
+    Horizontal reflection & $f'(x) = f(-x)$\\
+    Vertical reflection & $f'(x) = -f(x)$  \\
+    Vertical stretch     & $f'(x) = kf(x), ~ k > 1$ \\
+    Vertical compression & $f'(x) = kf(x), ~ k 0 < k < 1$  \\
+  \end{tabular}
+\end{footnotesize}
+\hformbar
+
+
+
+\formdesc{Distance Formula}
+
+\begin{equation}
+	d(P_1, P_2) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\end{equation}
+
+
+is the distance between points $P_1 = (x_1, y_1)$ and $P_2 = (x_2, y_2)$
+\hformbar
+
+
+
+\formdesc{Linear Functions}
+
+\begin{itemize}
+	\item Linear functions have a constant rate of change, $m$
+
+		\begin{equation}
+			m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+		\end{equation}
+	\item Estimate horizontal line by solving $f(x) = 0$
+	\item Find the point where two non-parallel lines meet: set $f(x) = g(x)$ and solve for $x$
+	\item Estimate slope from two points by solving for $m$:
+	    \begin{equation}
+	        y_1 - y_2 = m(x_1 - x_2)
+	    \end{equation}
+\end{itemize}
+\hformbar
+
+
+
+\formdesc{Quadratic Functions}
+
+\begin{center}
+  \begin{tabular}{ll}
+    Standard form                  & $f(x) = ax^2 + bx + c$                   \\[.7em]
+    Vertex or transformation form  & $f(x) = a(x - h)^2 + k$                  \\[.7em]
+    Quadratic eq.                  & $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ \\[.7em]
+  \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item $b^2 - 4ac > 0 \Rightarrow$ Two real unequal solutions
+    \item $b^2 - 4ac = 0 \Rightarrow$ Repeated real solution
+    \item $b^2 - 4ac < 0 \Rightarrow$ Two complex solutions
+\end{itemize}
+
+\hformbar
+
+
+
+\formdesc{Polynomial Functions}
+
+\begin{equation}
+  f(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n = \sum_{k=0}^n a_k x^{n-k}
+\end{equation}
+
+\begin{center}
+  \begin{tabular}{ll}
+    $a_0$     & Constant term                         \\
+    $a_n$     & Polynomial coefficient                \\
+    $a_nx^m$  & Term ($m$ is called \textit{degree})  \\
+  \end{tabular}
+\end{center}
+
+\hformbar
+
+
+
+\formdesc{Rational Functions}
+
+Can be written as a quotient of two polynomials $P(x)$ and $Q(x)$:
+
+\begin{equation}
+  f(x) = \frac{P(x)}{Q(x)} = \frac{\sum_{k=0}^n a_k x^{n-k}}{\sum_{k=0}^n b_k x^{n-k}}
+\end{equation}
+
+  \begin{itemize}
+    \item Horizontal Intercept is the inputs where the output is 0
+    \item Vertical Intercept is where input is 0 (if defined)        
+  \end{itemize}
+
+\hformbar
+
+
+
+\formdesc{Asymptotes}
+
+The ``line'' a function approaches but never touches
+
+\begin{description}
+	\item[Vertical] A vertical line $x = a$ where the graph tends towards positive or negative 
+	                infinity as the inputs approach $a$:
+	                \begin{equation}
+	                    x \rightarrow a,\, f(x) \rightarrow \pm~ \infty
+	                \end{equation}
+	\item[Horizontal] A horizontal line $y = b$ where the graph approaches the line as the
+	                  input gets larger:
+	                   \begin{equation}
+	                       x \rightarrow \pm~ \infty,\, f(x) \rightarrow b
+	                   \end{equation}
+\end{description}
+\hformbar
+
+
+
+\formdesc{Asymptotes of Rational Functions}
+
+\begin{description}
+    \item[Vertical] Where denominator = 0 but numerator $\neq 0$
+    \item[Horizontal] Determined by respective degrees of numerator and denominator:
+        \begin{itemize}
+            \item Degree of denominator $>$ degree of numerator $\Rightarrow$ Horizontal asymptote at $y = 0$
+            \item Degree of denominator $<$ degree of numerator $\Rightarrow$ No horizontal asymptote
+            \item Degree of denominator = degree of numerator $\Rightarrow$ Horizontal asymptote is ratio of leading coefficients
+        \end{itemize}
+\end{description}
+\hformbar
+
+
+
+\formdesc{Exponential Functions}
+
+Rate of change is as a percent, i.e., not an constant (absolute) rate. Takes the form:
+
+\begin{equation}
+    f(x) = a(1 + r)^x
+\end{equation}
+
+or, 
+
+\begin{equation}
+    f(x) = ab^x,~ b = 1 + r
+\end{equation}
+
+Can always be rewritten in terms of logarithms:
+
+\begin{equation}
+    b^a = c \equiv log_b~ c = a
+\end{equation}
+
+\begin{description}
+    \item[Continuous Growth] Use $e = 2.718282\dots$ for continuous growth, often natural phenomena
+        \begin{equation}
+            f(x) = ae^{rx}
+        \end{equation}
+        
+        where
+        
+        \begin{itemize}
+            \item $a \equiv$ initial quantity
+            \item $r \equiv$ continuous growth rate
+        \end{itemize}
+\end{description}
+
+\textit{ALMOST ALWAYS USE CONTINUOUS $e$ FORM!}\\
+
+Solve by:
+
+\begin{enumerate}
+    \item Isolate exponential expression, where possible
+    \item Take log on both sides
+    \item Use \textit{exponent property} of logs to pull variables of out exponent
+    \item Use algebra to solve for variable
+\end{enumerate}
+\hformbar
+
+
+
+\formdesc{Graphing Exponential Functions}
+
+\begin{itemize}
+    \item $a \equiv$ vertical intercept
+        \begin{itemize}
+            \item $a > 0 \Rightarrow$ concave up
+            \item $a < 0 \Rightarrow$ concave down
+        \end{itemize}
+    \item $b \equiv$ rate of growth
+        \begin{itemize}
+            \item $b > 1 \Rightarrow$ growing
+            \item $0 < b < 1 \Rightarrow$ decaying
+        \end{itemize}
+    \item Horizontal asymptote is where $y = 0$
+\end{itemize}
+\hformbar
+
+
+
+\formdesc{Logarithmic Functions}
+
+The inverse of exponential functions; use to solve exponential functions. Commonly used to express quantities that vary widely in size. Form:
+
+\begin{equation}
+    log_b~ x
+\end{equation}
+
+which can be rewritten in terms of exponents:
+
+\begin{equation}
+    b^a = c \equiv log_b~ c = a
+\end{equation}
+
+\begin{description}
+    \item[Inverse Property of Logs] 
+        \begin{eqnarray}
+            log_b~ b^x &=& x \\
+            b^{log_b~ x} &=& x
+        \end{eqnarray}
+        
+    \item[Exponent Property]
+        \begin{equation}
+            log_b~ A^r = r log_b~ A
+        \end{equation}
+\end{description}
+
+
+
+\newpage
