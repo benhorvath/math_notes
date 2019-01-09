@@ -1,0 +1,80 @@
+\section{Regression: OLS}
+
+
+\formdesc{Form}
+
+\begin{equation}
+	y = \beta_0 + \beta_1 x
+\end{equation}
+
+describes the true, unobserved model, while
+
+\begin{equation}
+	\hat{y} = b_0 + b_1x
+\end{equation}
+
+describes the estimated model. The estimate $\hat{y}$ describes the average value around which subjects where $x = x_i$ will cluster.
+\hformbar
+
+
+
+\formdesc{Residuals}
+
+\begin{equation}
+	e_i = y_i - \hat{y}_i
+\end{equation}
+
+is the residual of the $i$th observations $(x_i, y_i)$, the differences between the observed response $(y_i)$ and the prediction $\hat{y}$
+
+\hformbar
+
+
+
+\formdesc{Correlation}
+
+\begin{equation}
+	r = \frac{1}{n - 1} \sum_{i=1}^n \frac{x_i - \bar{x}}{s_x} ~ \frac{y_i - \bar{y}}{s_y}
+\end{equation}
+
+describes the strength of the linear relationship between two variables $x$ and $y$, where $0 \leq r \leq 1$, and $s$ is sample standard deviation
+\hformbar
+
+
+
+\formdesc{Least Squares Criterion}
+
+\begin{equation}
+	\mathrm{arg\,min} \sum_{i=1}^n e_i^2  \equiv e_1^2 + e_2^2 + \ldots + e_n^2
+\end{equation}
+
+describes the best fitting line, the \textit{least squares line}, i.e., minimizes the sum of squared residuals. To calculate:
+
+\begin{equation}
+	b_1 = \frac{s_y}{s_x} r
+\end{equation}
+
+\begin{equation}
+	y - \hat{y} = b_1 (x - \hat{x})
+\end{equation}
+
+where $x_0 = \bar{x}$ and $y_0 = \bar{y}$
+
+\subsection*{Assumptions}
+
+\begin{enumerate}
+	\item \textit{Linearity}. Data must show a linear trend
+	\item \textit{Near normal residuals}
+	\item \textit{Constant variability}. The variability of points around the least-squares line must be constant, e.g., the scale of $e$ cannot increase as $x$ increases producing a fanning pattern
+	\item \textit{Independent observations}. 
+\end{enumerate}
+
+\hformbar
+
+
+
+
+
+
+
+
+\newpage

@@ -279,6 +279,9 @@ Describes the number of events in a larger population over a unit of time with r
 %
 % Inferential Statistics
 %
+% See Statistical Inference by Casella p. 373 for alternative and better 
+% notation for this
+%
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -358,35 +361,200 @@ $N$, the sample size, increases---regardless of the shape of the parent populati
 
 \formdesc{Hypothesis Testing}
 
-\begin{table}[]
-\begin{tabular}{ll}
-One-Sided      & Two-Sided       \\
-$H_0: x = A$   & $H_0: x = A$    \\
-$H_A: x >/< A$ & $H_A: x \neq A$
-\end{tabular}
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c}
+      One-Sided      & Two-Sided       \\
+      \hline
+      $H_0: x = A$   & $H_0: x = A$    \\
+      $H_A: x >/< A$ & $H_A: x \neq A$
+    \end{tabular}
+  \end{center}
 \end{table}
+
+\vspace{-2em}
 
 The process of comparing two point estimates, to determine if any difference between them is ``real'' or the result of natural variance in samples.
 
 \begin{itemize}
-	\item \textit{Type I} errors, or false positives, occur when the null hypothesis  is true, but rejected
-	\item \textit{Type II} errors, or false negatives, occur when the alternative hypothesis is true, and the null hypothesis is not rejected
+	\item \textit{Type I} errors, or false positives, occur when $H_0$  is true, but rejected
+	\item \textit{Type II} errors, or false negatives, occur when $H_A$ is true, and $H_0$ is not rejected
 \end{itemize}
 
 \subsection*{Quantifying Risk}
 
 \begin{itemize}
 	\item The risk of Type I errors is quantified by $\alpha$, i.e., the probability the point estimate is more than $z^*$ standard deviations away from the true population parameter
-	\item The $p$-value is $1 - \alpha$, the probability of observing data at least as favorable to the alternative hypothesis as the present data set, if the null hypothesis is true
+	\item The $p$-value is the probability of observing data at least as favorable to the alternative hypothesis, i.e., as ``extreme,'' as the present data set, if $H_0$ is actually true
+	\item If the $p$-value is less than the chosen $\alpha$, data is sufficient to reject $H_0$
 \end{itemize}
-
-\subsection*{One- and Two-Sided Hypotheses}
-
-% Move to top, use a table with 2 columns and 3 rows, as in notes
+\hformbar
 
 
+
+\formdesc{P-Value Calculations}
+
+\subsection*{One-Sided}
+
+%\begin{enumerate}
+%	\item Look up test statistic, e.g., $\bar{x}$, on $z$-table
+%	\item Determine the probability that $Z$ is more extreme than $\bar{x}$:
+%	    \begin{equation}
+%	    	Z = \frac{\bar{x} - \mu}{SE}}
+%	    \end{equation}
+%	\item Use 
+%\end{enumerate}
+
+\subsection*{Two-Sided}
 
 \hformbar
+
+
+
+\formdesc{Sample Proportions}
+
+Population parameter $\pi$ is sampled:
+
+\begin{eqnarray}
+  \mu       &=& \hat{p} = \frac{\sum_n^{i=1} x_{i}}{n} \\
+  SE_{\hat{p}}  &=& \sqrt{\frac{p(1-p)}{n}}
+\end{eqnarray}
+
+where $0 \leq \hat{p} \leq 1$ and $x_i = \{0, 1\}$
+\hformbar
+
+
+
+\formdesc{Sample Proportions: Confidence Intervals}
+
+\begin{enumerate}
+	\item Assess normality:
+		\begin{itemize}
+			\item At least 10 observations for each $\{0, 1\}$
+			\item Sample is less than 10 percent of population and observations are independent
+		\end{itemize}
+	\item Calculate standard error $SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$
+	\item Determine $z^*$, e.g., 1.96
+	\item Put together point estimate and margin of error:
+	\begin{equation}
+		\hat{p} \pm z^* \times SE_{\hat{p}}
+	\end{equation}
+\end{enumerate}
+
+\hformbar
+
+
+
+\formdesc{Sample Proportions: Hypothesis Tests}
+
+\textbf{FIX}
+
+\begin{eqnarray}
+  H_0: \hat{p} = 0.5 \\
+  H_A: \hat{p} >/\neq 0.5
+\end{eqnarray}
+
+\begin{enumerate}
+	\item Evaluate normality
+	\item Compute $SE_{\hat{p}}$ \textit{using null hypothesis}:
+		\begin{equation}
+			SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}},
+		\end{equation}
+		often $ \sqrt{\frac{0.5(1-0.5)}{n}}$
+	\item Calculate Z-score using hypotheses:
+		\begin{equation}
+			\frac{\hat{p} - \hat{p}_0}{SE_{\hat{p}}}
+		\end{equation}	
+	\item Convert $Z$ to $p$-value and decide whether to reject the null or fail to
+\end{enumerate}
+
+\hformbar
+
+
+
+\formdesc{Sample Proportions: Sample Size}
+\hformbar
+
+
+
+\formdesc{Difference of Proportions}
+\hformbar
+
+
+
+\formdesc{Difference of Proportions: Confidence Intervals}
+\hformbar
+
+
+
+\formdesc{Difference of Proportions: Hypothesis Tests}
+\hformbar
+
+
+
+\formdesc{Difference of Proportions: Pooled Proportion}
+\hformbar
+
+
+
+\formdesc{$\chi^2$ goodness of fit}
+
+
+\begin{equation}
+	\chi^2 = \sum_{k=1}^N \frac{ (observed_k - expected_k)^2 }{ expected_k }
+\end{equation}
+
+\begin{itemize}
+	\item $k$ mutually exclusive classes
+	\item $n$ observations of $x_i$
+	\item one parameter, degrees of freedom $df$
+	\item follows the chi-square distribution if null hypothesis is true
+\end{itemize}
+
+Summarizes how strongly observed count data deviates from the expected, or null, counts---larger values of $\chi^2$ indicate stronger deviation
+
+\subsection*{Does a statistical model fit this sample?}
+
+\begin{enumerate}
+	\item Develop hypotheses:
+		\begin{enumerate}
+			\item $H_0$: Sample follows distribution $D$
+			\item $H_A$: Sample does not follow distribution $D$
+		\end{enumerate}
+	\item Check assumptions
+		\begin{enumerate}
+			\item Each expected count must be at least 5
+			\item Can use binning to get around this
+		\end{enumerate}
+	\item Establish expected counts (expected proportion of total count in each bin):
+		\begin{equation}
+			E_k = expected_k \times n
+		\end{equation}
+	\item Compute $\chi^2$ statistic
+	\item Validate assumptions hold to apply $\chi^2$ to $\chi^2$ distribution
+	\item Using $k-1$ degrees of freedom, use $\chi^2$ table to compute a $p$-value
+	\item Decide to reject or fail to reject $H_0$
+\end{enumerate}
+
+\hformbar
+
+
+
+\formdesc{$\chi^2$: $p$-value}
+\hformbar
+
+
+
+\formdesc{Two-Way Tables: Independence}
+\hformbar
+
+
+
+
+
+
+
+
 
 
 
@@ -490,7 +658,7 @@ Given $N$ and population proportion $\pi$:
 \begin{enumerate}
   \item Find mean of $p = \pi$
   \item Calculate standard error as above
-  \item Conduct as normal distribution given $N$ is sufficently large and $\pi$
+  \item Conduct as normal distribution given $N$ is sufficiently large and $\pi$
 	is not too close to 0 or 1
 \end{enumerate}
 
@@ -514,33 +682,7 @@ intervals.
 
 \hformbar
 
-\subsection{Chapter 3 questions}
 
-What percent of the standard normal distribution is found in Z >/< A? A: Use pnorm() or a Z table. If A is negative and we want to know Z > A, we know the percent is greater than 15. If |Z| < 0.5 -- the bounds are -.5 and 0.5, so Z(.5) - Z(-.5).
-
-Normal distributions described as $m ~ N(\mu, \sigma)$.
-
-Problem 3.4. Given two distributions, and two points in each, which does each compare relative to their groups? 1. Convert both points into Z scores, and compare them. You can also convert the Z-scores into probabilities to say the percent they beat/were beaten by.
-
-Geometric examples: \url{https://www.redbrick.dcu.ie/~minisham/CA/Notes/CA266/10_Geometric_Distribution.pdf}
-
-Problem No. 3.18. 68-95-99.7\% rule.
-
-Problem No. 3.22. Given a probability distribution of a sequence, what is the probability the Xth item meets some condition (number of coin tosses til heads, number of products produced until defect, etc.)? Use geometric distribution.
-
-Problem No. 3.22.d. What is the probability the sequence produces no defects after n? Uses factorials
-
-Problem No. 3.22.c. How many in the sequence before the first defect? This is mean or expected value of geometric distribution.
-
-Problem No. 3.38. Binomial model to calculate 2/3 kids will be boys.
-
-Problem No. 3.42. Probability on the Nth trial will have the Mth success? Solved similar as above with binomial model? Referring to a probability distribution, not a discrete event (like gambler's fallacy).
-
-
-
-\subsection{Chapter 4 Questions}
-
-Problem No. 4.4e. Measure uncertainty around a point estimate by computing a 95\% confidence interval
 
 
 \newpage
