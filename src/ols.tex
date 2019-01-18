@@ -53,11 +53,11 @@ describes the best fitting line, the \textit{least squares line}, i.e., minimize
 	b_1 = \frac{s_y}{s_x} r
 \end{equation}
 
+then use the fact that the point $(\bar{x}, \bar{y})$ is on the least squares line to set $x_0 = \bar{x}$ and $y_0 = \bar{y}$ along with the slope $b_1$, solve for $x$ in:
+
 \begin{equation}
 	y - \hat{y} = b_1 (x - \hat{x})
 \end{equation}
-
-where $x_0 = \bar{x}$ and $y_0 = \bar{y}$
 
 \subsection*{Assumptions}
 
@@ -68,6 +68,28 @@ where $x_0 = \bar{x}$ and $y_0 = \bar{y}$
 	\item \textit{Independent observations}. 
 \end{enumerate}
 
+\hformbar
+
+
+
+\formdesc{$r^2$}
+
+\begin{equation}
+	r^2 = 1 - \frac{ \sum_{i=1}^n (y_i - \hat{y}_i)^2 }{ \sum_{i=1}^n (y_i - \bar{y})^2 } = 1 - \frac{SSE}{SST}
+\end{equation}
+
+\begin{itemize}
+	\item $SSE$ is summed squares of residuals:
+	\item $SSTO$ is total sum of squares
+\end{itemize}
+
+\hformbar
+
+
+
+\formdesc{Regression: T-Test}
+
+Tests to determine if null hypothesis $b_1 = 0$ is to be rejected
 \hformbar
 
 
