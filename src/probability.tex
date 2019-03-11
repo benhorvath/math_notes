@@ -98,7 +98,6 @@ are disjoint events, when $A$ and $B$ are mutually exclusive and there is no int
 
 \formdesc{Complement and Subtraction Rule}
 
-
 \begin{eqnarray}
 P(A') \equiv P(A^c) \equiv P(\neg A) &\equiv& \{x: x \notin A\} \equiv 1 - P(A) \\
 P(A') &=& 1 - P(A)
@@ -134,8 +133,126 @@ is the probability of the outcome of event A given condition B.
 \begin{equation}
   P(A|B) = \frac{P(A) ~P(B|A)}{ P(A) ~ P(B|A) + P(A) ~ P(B|A)}
 \end{equation}
+\hformbar
+
+
+
+
+\formdesc{The Fundamental Principle of Counting}
+
+If an operation can be performed in $n_1$ ways, and if for each of these a second operation can be performed $n_2$ ways, and for each of the first two a third operation can be performed in $n_3$ ways, $\ldots$, then the sequence of $k$ operations can be performed in $n_1 n_2 \mdots n_k$ ways.
 
 \hformbar
 
 
 
+\formdesc{Factorial}
+
+\begin{equation}
+    n! = n (n-1) (n-2) (2) (1)
+\end{equation}
+
+with $0! = 1$.
+\hformbar
+
+
+
+\formdesc{Permutation}
+
+A permutation $\sigma$ any finite set $A$ is a one-to-one mapping of $A$ onto itself. An element mapped to itself in the permutation is a \textit{fixed point}.
+
+\subsection*{Example}
+
+One permutation of the set $A = \{a, b, c\}$ is:
+
+\begin{equation}
+    \sigma = \begin{pmatrix}
+                  a & b & c \\ 
+                  b & c & a
+             \end{pmatrix}
+\end{equation}
+
+where $a$ is sent to $b$, $b$ to $c$, and $c$ to $a$.
+\hformbar
+
+
+\formdesc{Permutations of $n$ elements}
+
+\begin{equation}
+    n!
+\end{equation}
+
+is the number of permutations of $n$ objects, that is, the number of arrangements of a set containing $n$ elements.
+\hformbar
+
+
+
+\formdesc{Permutations: $n$ taken $r$ at a time}
+
+\begin{equation}
+    \perm{n}{k}=\frac{n!}{(n-k)!}
+\end{equation}
+
+represents the number of permutations of $n$ distinct objects taken $r$ at a time.
+\hformbar
+
+
+
+\formdesc{Stirling's Approximation of $n!$}
+
+\begin{equation}
+    n^n e^{-n} \sqrt{2 \pi n}
+\end{equation}
+
+is a sequence asymptotically equal to $n!$.
+\hformbar
+
+
+
+\formdesc{Combinations}
+
+\begin{equation}
+    \comb{n}{j} = \begin{pmatrix} n \\ j \end{pmatrix} = \frac{n!}{j! (n - j)!}
+\end{equation}
+
+is the number of subsets of size $j$ that can be assembled given a set of $n$ elements, for integers $n$ and $j$ such that $0 < j < n$.
+\hformbar
+
+
+
+\formdesc{Bernoulli Trials Process}
+
+A sequence of $n$ experiments such that
+
+\begin{itemize}
+    \item Each experiment has two possible outcomes, called \textit{success} and \textit{failure}
+    \item The probability of $p$ of success of each experiment is the same for each, and is independent of previous experiments
+\end{itemize}
+
+The probability of failure is $q = 1 - p$.
+\hformbar
+
+
+\formdesc{Binomial Probabilities}
+
+\begin{equation}
+    b(n, p, j) = \comb{n}{j} p^j (1 - p)^{n - j}
+\end{equation}
+
+represents the probability that in $n$ Bernoulli trials there are exactly $j$ successes, given $n$ trials, and each trials' success rate is $p$.
+\hformbar
+
+
+
+\formdesc{Binomial Distribution}
+
+\begin{equation}
+    B \sim b(n, p, k)
+\end{equation}
+
+gives the probability of the number of successes $k$ in a sequence of Bernoulli trials with parameters $p$ and $n$.
+\hformbar
+
+PDF P. 107
+
+\newpage
